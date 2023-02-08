@@ -5,8 +5,8 @@ session_start();
 if(empty($_SESSION['password-exist'])){
     header('Location: index.php');
 }
-// VARIABLE PASSED BY INDEX.PHP
-$password = $_SESSION['password-length'];
+// VARIABLE PASSED and named same to first variable(into functions.php) BY INDEX.PHP
+$user_length = $_SESSION['password-length'];
 ?>
 
 
@@ -23,7 +23,7 @@ $password = $_SESSION['password-length'];
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-    <h1> <?= randomPassword($password)?></h1>
+    <h1> <?= randomPassword($user_length)?></h1>
 
 </body>
 </html>
