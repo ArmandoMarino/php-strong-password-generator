@@ -43,20 +43,25 @@ $_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
 
             <!-- CHECK-BOX -->
             <div class=" d-flex justify-content-between align-items-center">
-                <p>Allow repetitions of one to more characters :</p>
+                <p>Allow letters, numbers or symbols :</p>
                 <div class="wrapper">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                YES
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                NO
-                            </label>
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Letters
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Numbers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Symbols
+                        </label>
                     </div>
                 </div>
             </div>
