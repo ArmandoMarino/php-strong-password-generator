@@ -1,5 +1,11 @@
 <?php
-include './functions.php';
+include __DIR__ .  '/./functions.php';
+
+if($user_length){
+session_start();
+$_SESSION['password-exist'] = true;
+header('Location: result.php');
+}
 ?>
 
 
@@ -25,6 +31,8 @@ include './functions.php';
                 <span class="input-group-text" id="basic-addon1">Lunghezza password :</span>
                 <input type="number" class="form-control" name="password-length" placeholder="Digita qui..." aria-label="Username">
             </div>
+            <button type="submit" class="btn btn-primary">Crea</button>
+            <!-- <a href=""></a>  -->
         </form>
 
     </div>

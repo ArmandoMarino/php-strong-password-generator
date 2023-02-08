@@ -1,6 +1,6 @@
 <?php
 $user_length = $_GET['password-length'] ?? '';
-var_dump($user_length);
+// var_dump($user_length);
 
 // Here i pass only the value i want to manipulate : $number (generic) and i pass later $user_length
 function randomPassword($user_number) {
@@ -16,7 +16,7 @@ function randomPassword($user_number) {
     return implode($pass); //turn the array into a string
 }
 
-echo randomPassword($user_length);
+// echo randomPassword($user_length);
 
 
 ?>
