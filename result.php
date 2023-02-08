@@ -7,6 +7,26 @@ if(empty($_SESSION['password-exist'])){
 }
 // VARIABLE PASSED and named same to first variable(into functions.php) BY INDEX.PHP
 $user_length = $_SESSION['password-length'];
+$letters = $_SESSION['letters'];
+$numbers = $_SESSION['numbers'];
+$symbols = $_SESSION['symbols'];
+if ($letters) {
+    $letters = true;
+} else {
+    $letters = false;
+}
+
+if ($numbers) {
+    $numbers = true;
+} else {
+    $numbers = false;
+}
+
+if ($symbols) {
+    $symbols = true;
+} else {
+    $symbols = false;
+}
 ?>
 
 
@@ -26,7 +46,7 @@ $user_length = $_SESSION['password-length'];
     <div class="mt-4 container text-center d-flex justify-content-center">
         <div class="card w-50">
             <h4>Your Password is :</h4>
-            <p> <strong><?= randomPassword($user_length, true, false, false)?></strong></p>
+            <p> <strong><?= randomPassword($user_length, $letters, $numbers, $numbers)?></strong></p>
         </div>
         
     </div>

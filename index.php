@@ -1,6 +1,14 @@
 <?php
 include __DIR__ .  '/./functions.php';
 
+// VARIABLE D'APPOGGIO
+$checked = false;
+
+if(isset($_GET['letters'|| 'numbers'||'symbols'])){
+$checked = 'checked';
+}
+
+
 if($user_length){
 session_start();
 // IF PASSWORD EXIST REDIRECT
@@ -11,7 +19,9 @@ header('Location: result.php');
 // SESSION IS OPEN AND WE CAN PICK THE NAME OF INPUT, AND SET THE POSSIBLE INVALID CAMP NAMED,
 // IN THIS CASE TH NAME IS "INVALID" NOW ITS READY TO BE PASSED TO RESULT.PHP
 $_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
-
+$_SESSION['letters'] = $GET['letters'] ?? 'false';
+$_SESSION['numbers'] = $GET['numbers'] ?? 'false';
+$_SESSION['symbols'] = $GET['symbols'] ?? 'false';
 ?>
 
 
@@ -46,20 +56,20 @@ $_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
                 <p>Allow letters, numbers or symbols :</p>
                 <div class="wrapper">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" id="letters" name="letters" <?= $checked ?>>
+                        <label class="form-check-label" for="letters">
                             Letters
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" id="numbers" name="numbers" <?= $checked ?>>
+                        <label class="form-check-label" for="numbers">
                             Numbers
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" id="symbols" name="symbols" <?= $checked ?>>
+                        <label class="form-check-label" for="symbols">
                             Symbols
                         </label>
                     </div>
