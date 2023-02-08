@@ -31,15 +31,15 @@ $_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
 <body>
     <div class="container text-center">
         <h1>Strong Password Generator</h1>
-        <h3>Genera una password sicura</h3>
+        <h3>Make a strong Password</h3>
         <!-- FORM -->
         <form action="" method="GET">
             <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Lunghezza password :</span>
-                <input type="number" class="form-control" name="password-length" placeholder="Digita qui..." aria-label="Username">
+                <span class="input-group-text" id="basic-addon1">Password length :</span>
+                <input type="number" class="form-control" name="password-length" placeholder="Enter a number..." aria-label="Username">
             </div>
-            <button type="submit" class="btn btn-primary">Crea</button>
-            <a href="http://localhost/php-strong-password-generator" class="btn btn-secondary">Reset</a>
+            <button type="submit" class="btn btn-primary">Generate</button>
+            <a href="http://localhost/php-strong-password-generator" class="btn btn-secondary">Cancel</a>
         </form>
 
     </div>

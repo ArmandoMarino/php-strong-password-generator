@@ -25,7 +25,7 @@ $user_length = $_SESSION['password-length'];
 <body>
     <div class="mt-4 container text-center d-flex justify-content-center">
         <div class="card w-50">
-            <h4>La tua Password è :</h4>
+            <h4>Your Password is :</h4>
             <p> <strong><?= randomPassword($user_length)?></strong></p>
         </div>
         
