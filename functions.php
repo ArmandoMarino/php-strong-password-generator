@@ -1,5 +1,6 @@
 <?php
 $user_length = $_GET['password-length'] ?? '';
+
 // var_dump($user_length);
 
 // Here i pass only the value i want to manipulate : $user_number (generic)

@@ -19,9 +19,9 @@ header('Location: result.php');
 // SESSION IS OPEN AND WE CAN PICK THE NAME OF INPUT, AND SET THE POSSIBLE INVALID CAMP NAMED,
 // IN THIS CASE TH NAME IS "INVALID" NOW ITS READY TO BE PASSED TO RESULT.PHP
 $_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
-$_SESSION['letters'] = $GET['letters'] ?? 'false';
-$_SESSION['numbers'] = $GET['numbers'] ?? 'false';
-$_SESSION['symbols'] = $GET['symbols'] ?? 'false';
+$_SESSION['letters'] = $GET_['letters'] ?? 'false';
+$_SESSION['numbers'] = $GET_['numbers'] ?? 'false';
+$_SESSION['symbols'] = $GET_['symbols'] ?? 'false';
 ?>
 
 

@@ -10,6 +10,7 @@ $user_length = $_SESSION['password-length'];
 $letters = $_SESSION['letters'];
 $numbers = $_SESSION['numbers'];
 $symbols = $_SESSION['symbols'];
+
 if ($letters) {
     $letters = true;
 } else {
@@ -27,6 +28,9 @@ if ($symbols) {
 } else {
     $symbols = false;
 }
+var_dump($letters);
+var_dump($numbers);
+var_dump($symbols);
 ?>
 
 
