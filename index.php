@@ -3,6 +3,7 @@ include __DIR__ .  '/./functions.php';
 
 if($user_length){
 session_start();
+// IF PASSWORD EXIST SESSION START
 $_SESSION['password-exist'] = true;
 header('Location: result.php');
 }

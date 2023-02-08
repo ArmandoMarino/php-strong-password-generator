@@ -23,7 +23,14 @@ $user_length = $_SESSION['password-length'];
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-    <h1> <?= randomPassword($user_length)?></h1>
+    <div class="mt-4 container text-center d-flex justify-content-center">
+        <div class="card w-50">
+            <h4>La tua Password è :</h4>
+            <p> <strong><?= randomPassword($user_length)?></strong></p>
+        </div>
+        
+    </div>
+    
 
 </body>
 </html>
