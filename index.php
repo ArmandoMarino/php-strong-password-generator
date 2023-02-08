@@ -6,6 +6,11 @@ session_start();
 $_SESSION['password-exist'] = true;
 header('Location: result.php');
 }
+
+// SESSION IS OPEN AND WE CAN PICK THE NAME OF INPUT, AND SET THE POSSIBLE INVALID CAMP NAMED,
+// IN THIS CASE TH NAME IS "INVALID" NOW ITS READY TO BE PASSED TO RESULT.PHP
+$_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
+
 ?>
 
 

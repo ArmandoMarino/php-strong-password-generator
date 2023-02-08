@@ -1,8 +1,12 @@
 <?php
+include __DIR__ .  '/./functions.php';
+
 session_start();
 if(empty($_SESSION['password-exist'])){
     header('Location: index.php');
 }
+// VARIABLE PASSED BY INDEX.PHP
+$password = $_SESSION['password-length'];
 ?>
 
 
@@ -19,7 +23,7 @@ if(empty($_SESSION['password-exist'])){
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-    <h1>prova</h1>
+    <h1> <?= randomPassword($password)?></h1>
 
 </body>
 </html>
