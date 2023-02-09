@@ -1,14 +1,6 @@
 <?php
 include __DIR__ .  '/./functions.php';
 
-// VARIABLE D'APPOGGIO
-$checked = false;
-
-if(isset($_GET['letters'|| 'numbers'||'symbols'])){
-$checked = 'checked';
-}
-
-
 if($user_length){
 session_start();
 // IF PASSWORD EXIST REDIRECT
@@ -19,9 +11,7 @@ header('Location: result.php');
 // SESSION IS OPEN AND WE CAN PICK THE NAME OF INPUT, AND SET THE POSSIBLE INVALID CAMP NAMED,
 // IN THIS CASE TH NAME IS "INVALID" NOW ITS READY TO BE PASSED TO RESULT.PHP
 $_SESSION['password-length'] = $_GET['password-length'] ?? "Invalid";
-$_SESSION['letters'] = $GET_['letters'] ?? 'false';
-$_SESSION['numbers'] = $GET_['numbers'] ?? 'false';
-$_SESSION['symbols'] = $GET_['symbols'] ?? 'false';
+
 ?>
 
 
@@ -51,30 +41,25 @@ $_SESSION['symbols'] = $GET_['symbols'] ?? 'false';
                 <input type="number" class="form-control" name="password-length" placeholder="Enter a number..." aria-label="Username">
             </div>
 
-            <!-- CHECK-BOX -->
+            <!-- CHECK-BOX
             <div class=" d-flex justify-content-between align-items-center">
-                <p>Allow letters, numbers or symbols :</p>
+                <p>Allow repetitions of one to more characters :</p>
                 <div class="wrapper">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="letters" name="letters" <?= $checked ?>>
-                        <label class="form-check-label" for="letters">
-                            Letters
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="numbers" name="numbers" <?= $checked ?>>
-                        <label class="form-check-label" for="numbers">
-                            Numbers
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="symbols" name="symbols" <?= $checked ?>>
-                        <label class="form-check-label" for="symbols">
-                            Symbols
-                        </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                YES
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                NO
+                            </label>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             
 
